@@ -49,7 +49,7 @@ class Codechef
 	    int ans;
 	  if((x>y||x>z)&&(x<y||x<z)){
 	      ans=x;
-	  }else  if((y>x||y>x)&&(y<x||y<z)){
+	  }else  if((y>x||y>z)&&(y<x||y<z)){
 	        ans=y;
 	    }
 	    else {
