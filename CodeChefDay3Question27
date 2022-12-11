@@ -10,14 +10,7 @@ Output Format
 Print a single line containing Yes if Bob can buy the fruits and No otherwise.
 
 You may print each character of the string in uppercase or lowercase (for example, the strings yes, Yes, yEs, and YES will all be treated as identical).
-
-Constraints
-1 \leq X,A,B \leq 10^51≤X,A,B≤10 
-5
  
-Subtasks
-Subtask 1 (100 points):
-Original constraints.
 Sample 1:
 Input
 Output
