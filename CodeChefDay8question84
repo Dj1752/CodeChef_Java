@@ -1,0 +1,75 @@
+Problem
+Summer is at its peak in Chefland. Chef is planning to purchase a water cooler to keep his room cool. He has two options available:
+
+Rent a cooler at the cost of XX coins per month.
+Purchase a cooler for YY coins.
+Given that the summer season will last for MM months in Chefland, help Chef in finding whether he should rent the cooler or not.
+
+Chef rents the cooler only if the cost of renting the cooler is strictly less than the cost of purchasing it. Otherwise, he purchases the cooler.
+
+Print \texttt{YES}YES if Chef should rent the cooler, otherwise print \texttt{NO}NO.
+
+Input Format
+The first line of input will contain an integer TT — the number of test cases. The description of TT test cases follows.
+The first and only line of each test case contains three integers XX, YY and MM, as described in the problem statement.
+Output Format
+For each test case, output \texttt{YES}YES if Chef should rent the cooler, otherwise output \texttt{NO}NO.
+
+You may print each character of the string in uppercase or lowercase (for example, the strings \texttt{YeS}YeS, \texttt{yEs}yEs, \texttt{yes}yes and \texttt{YES}YES will all be treated as identical).
+
+Constraints
+1 \leq T \leq 1001≤T≤100
+1 \leq X, M \leq 10^41≤X,M≤10 
+4
+ 
+1 \leq Y \leq 10^81≤Y≤10 
+8
+ 
+Sample 1:
+Input
+Output
+3
+5 10 1
+5 10 2
+5 10 3
+YES
+NO
+NO
+Explanation:
+Test case 11: Cost of renting the cooler = 5=5 coins. Cost of purchasing the cooler = 10=10 coins. So, Chef should rent the cooler as the cost of renting the cooler for 11 month is strictly less than purchasing it.
+
+Test case 22: Cost of renting the cooler = 10=10 coins. Cost of purchasing the cooler = 10=10 coins. So, Chef should not rent the cooler as the cost of renting the cooler for 22 months is not strictly less than purchasing it.
+
+Test case 33: Cost of renting the cooler = 15=15 coins. Cost of purchasing the cooler = 10=10 coins. So, Chef should not rent the cooler as the cost of renting the cooler for 33 months is not strictly less than purchasing it.
+
+Solution
+
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		// your code goes here
+		Scanner sc = new Scanner(System.in);
+		int t =sc.nextInt();
+		
+		while(t-->0){
+		    int x =sc.nextInt();
+			int y =sc.nextInt();
+			int z =sc.nextInt();
+		    
+		    
+		    if(x*z<y)
+		    System.out.println("YEs");
+		    else
+		    System.out.println("No");
+		}
+	}
+}
