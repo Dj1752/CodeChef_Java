@@ -1,0 +1,108 @@
+Problem
+In the medieval age, there were 33 kingdoms AA, BB, and CC. The army of these kingdom had N_AN 
+A
+​
+ , N_BN 
+B
+​
+ , and N_CN 
+C
+​
+  soldiers respectively.
+
+You are given that an army with XX soldiers can defeat an army with YY soldiers only if X \gt YX>Y.
+
+An army is said to be dominant if it can defeat both the other armies combined. For example, kingdom CC's army will be dominant only if N_C > N_A + N_BN 
+C
+​
+ >N 
+A
+​
+ +N 
+B
+​
+ .
+
+Determine whether any of the armies is dominant or not.
+
+Input Format
+The first line contains a single integer TT - the number of test cases. Then the test cases follow.
+The first and only line of each test case contains three integers N_AN 
+A
+​
+ , N_BN 
+B
+​
+ , and N_CN 
+C
+​
+  - the number of warriors in the armies of kingdoms AA, BB, and CC respectively.
+Output Format
+For each test case, output YES if any of the armies is dominant. Otherwise, output NO.
+
+You may print each character of YES and NO in uppercase or lowercase (for example, yes, yEs, Yes will be considered identical).
+
+Constraints
+1 \leq T \leq 10001≤T≤1000
+1 \leq N_A, N_B, N_C \leq 1001≤N 
+A
+​
+ ,N 
+B
+​
+ ,N 
+C
+​
+ ≤100
+Sample 1:
+Input
+Output
+4
+15 5 6
+12 13 16
+1 1 100
+10 10 20
+YES
+NO
+YES
+NO
+Explanation:
+Test case 11: The kingdom AA's army is dominant since 15 > 5 + 615>5+6.
+
+Test case 22: We can observe that none of the armies is dominant.
+
+Test case 33: The kingdom CC's army is dominant since 100 > 1 + 1100>1+1.
+
+Test case 44: We can observe that none of the armies is dominant. Note that the kingdom CC's army is not dominant since 20 \le 10 + 1020≤10+10.
+
+Solution
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		// your code goes here
+		Scanner sc = new Scanner(System.in);
+		int t =sc.nextInt();
+		
+		while(t-->0){
+		    int x =sc.nextInt();
+			int y =sc.nextInt();
+			int z =sc.nextInt();
+		    
+		    
+		    if(x>y+z||z>y+x||y>z+x)
+		    System.out.println("yes");
+		 else
+		    System.out.println("no");
+		}
+	}
+}
+
