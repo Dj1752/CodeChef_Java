@@ -1,0 +1,59 @@
+Problem
+Chef wants to gift CC chocolates to Botswal on his birthday. However, he has only XX chocolates with him.
+The cost of 11 chocolate is YY rupees.
+
+Find the minimum money in rupees Chef needs to spend so that he can gift CC chocolates to Botswal.
+
+Input Format
+First line will contain TT, number of test cases. Then the test cases follow.
+Each test case contains of a single line of input, three integers C, X,C,X, and YY.
+Output Format
+For each test case, output in a single line answer, the minimum money in rupees Chef needs to spend.
+
+Constraints
+1 \leq T \leq 1001≤T≤100
+1 \leq C \leq 1001≤C≤100
+0 \leq X \leq C0≤X≤C
+1 \leq Y \leq 1001≤Y≤100
+Sample 1:
+Input
+Output
+2
+7 5 5
+10 1 1
+10
+9
+Explanation:
+Test Case 11: Chef has to gift a total of 77 chocolates out of which he has 55 chocolates. Thus, Chef needs to buy 22 more chocolates, which costs him 1010 rupees.
+
+Test Case 22: Chef has to gift a total of 1010 chocolates out of which he has 11 chocolate. Thus, Chef needs to buy 99 more chocolates, which costs him 99 rupees.
+
+Solution
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		// your code goes here
+		Scanner sc = new Scanner(System.in);
+		int t =sc.nextInt();
+		
+		while(t-->0){
+		    int x =sc.nextInt();
+			int y =sc.nextInt();
+			int z =sc.nextInt();
+		    
+		    int sub=x-y;
+		    int res = sub*z;
+		    System.out.println(res);
+		    
+		}
+	}
+}
