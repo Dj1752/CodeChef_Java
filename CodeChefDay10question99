@@ -1,0 +1,80 @@
+Problem
+In Chefland, each chicken has XX legs and each duck has YY legs. Chef's farm can have exactly one type of bird.
+
+Given that the birds on the farm have a total of ZZ legs:
+
+Print CHICKEN, if the farm can have only chickens but not ducks.
+Print DUCK, if the farm can have only ducks but not chickens.
+Print ANY, if the farm can have either chickens or ducks.
+Print NONE, if the farm can have neither chickens nor ducks.
+Input Format
+The first line will contain TT, the number of test cases. Then the test cases follow.
+Each test case consists of a single line of input, containing three space-separated integers X, Y, ZX,Y,Z.
+Output Format
+For each test case, output in a single line the type of bird on the farm.
+
+Print CHICKEN, if the farm can have only chickens but not ducks.
+Print DUCK, if the farm can have only ducks but not chickens.
+Print ANY, if the farm can have either chickens or ducks.
+Print NONE, if the farm can have neither chickens nor ducks.
+You may print each character of the string in uppercase or lowercase (for example, the strings \texttt{AnY}AnY, \texttt{anY}anY, \texttt{any}any and \texttt{ANY}ANY will all be treated as identical).
+
+Constraints
+1 \leq T \leq 10001≤T≤1000
+1 \leq X, Y, Z \leq 10001≤X,Y,Z≤1000
+Sample 1:
+Input
+Output
+3
+2 3 5
+2 2 2
+3 4 6
+NONE
+ANY
+CHICKEN
+Explanation:
+Test case 11: There are 55 legs on the farm. Each chicken has 22 legs and each duck has 33 legs. Thus, the farm can have neither chickens nor ducks.
+
+Test case 22: There are 22 legs on the farm. Each chicken has 22 legs and each duck has 22 legs. Thus, the farm can have any bird among chicken and duck.
+
+Test case 33: There are 66 legs on the farm. Each chicken has 33 legs and each duck has 44 legs. Thus, the farm can have chicken only.
+
+Solution
+
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+			Scanner sc = new Scanner(System.in);
+int t =sc.nextInt();
+		
+		while(t-->0){
+		    int x =sc.nextInt();
+			int y =sc.nextInt();
+		    int z =sc.nextInt();
+		   
+		   if(x==z&&y==z){
+		    System.out.println("any");
+		       
+		   }
+		    if((z%y==0) && (z%x!=0)){
+		    System.out.println("Duck");
+		        
+		    }
+		    if((z%x==0)&&(z%y!=0)){
+		    System.out.println("chicken");
+		        
+		    }
+		    if((z%x!=0)&&(z%y!=0)){
+		    System.out.println("none");}
+		}   
+	}
+}
