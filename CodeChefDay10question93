@@ -1,0 +1,68 @@
+Problem
+Chef is given two integers AA and CC such that A \leq CA≤C.
+
+Chef wants to find whether there exists any integer BB such that A, B,A,B, and CC are in arithmetic progression.
+
+Input Format
+The first line of input will contain a single integer TT, denoting the number of test cases.
+Each test case consists of two space-separated integers AA and CC, the given integers.
+Output Format
+For each test case, output -1−1 if there exists no integer BB such that A, B,A,B, and CC are in arithmetic progression. Else, output the value of BB.
+
+Constraints
+1 \leq T \leq 601≤T≤60
+1 \leq A \leq C \leq 101≤A≤C≤10
+Sample 1:
+Input
+Output
+4
+3 5
+6 6
+2 7
+1 9
+4
+6
+-1
+5
+Explanation:
+Test case 11: Considering B = 4B=4, the three integers are in arithmetic progression as B-A = C-B = 1B−A=C−B=1.
+
+Test case 22: Considering B = 6B=6, the three integers are in arithmetic progression as B-A = C-B = 0B−A=C−B=0.
+
+Test case 33: There exists no integral value of BB such that A, B,A,B, and CC are in arithmetic progression.
+
+Test case 44: Considering B = 5B=5, the three integers are in arithmetic progression as B-A = C-B = 4B−A=C−B=4.
+
+Solution
+
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+			Scanner sc = new Scanner(System.in);
+int t =sc.nextInt();
+		
+		for(int i =0;i<t;i++){
+		    int x =sc.nextInt();
+			int y =sc.nextInt();
+			int c=(x+y)/2;
+			if((c-x)==(y-c)){
+			    System.out.println(c);
+			}else{
+			    System.out.println("-1");
+			}
+			   
+			}
+	
+		  
+		
+	}
+}
