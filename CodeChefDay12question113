@@ -1,0 +1,134 @@
+Problem
+Chef is taking a tough examination. The question paper consists of NN objective problems and each problem has 44 options A, B, C,A,B,C, and DD, out of which, exactly one option is correct.
+
+Since Chef did not study for the exam, he does not know the answer to any of the problems. Chef was looking nearby for help when his friend somehow communicated the following information:
+
+Exactly N_AN 
+A
+​
+  problems have option AA as the answer.
+Exactly N_BN 
+B
+​
+  problems have option BB as the answer.
+Exactly N_CN 
+C
+​
+  problems have option CC as the answer.
+Exactly N_DN 
+D
+​
+  problems have option DD as the answer.
+Note that:
+
+N_A + N_B + N_C + N_D = NN 
+A
+​
+ +N 
+B
+​
+ +N 
+C
+​
+ +N 
+D
+​
+ =N.
+Each problem is worth exactly 11 mark and there is no negative marking.
+Even though Chef knows the number of correct options of each type, he does not know the correct answer to any problem.
+Based on the given information, find the maximum marks Chef can guarantee if he marks the answers optimally.
+
+Input Format
+First line will contain TT, number of test cases. Then the test cases follow.
+First line of each test case contains an integer NN denoting the number of problems.
+Second line of each test case contains 44 integers N_A, N_B, N_C,N 
+A
+​
+ ,N 
+B
+​
+ ,N 
+C
+​
+ , and N_DN 
+D
+​
+  - as mentioned in the problem statement.
+Output Format
+For each test case, output the maximum marks Chef can guarantee if he marks the answers optimally.
+
+Constraints
+1 \leq T \leq 10001≤T≤1000
+1 \leq N \leq 10^51≤N≤10 
+5
+ 
+0 \leq N_A, N_B, N_C, N_D \leq N0≤N 
+A
+​
+ ,N 
+B
+​
+ ,N 
+C
+​
+ ,N 
+D
+​
+ ≤N
+N_A + N_B + N_C + N_D = NN 
+A
+​
+ +N 
+B
+​
+ +N 
+C
+​
+ +N 
+D
+​
+ =N
+Sample 1:
+Input
+Output
+2
+5
+0 0 5 0
+10
+7 1 1 1
+5
+7
+Explanation:
+Test Case 11: Chef knows that all the problems have answer as option CC and thus he will mark all the answers as CC and get 55 marks.
+
+Test Case 22: It will be optimal for Chef to mark all the options as AA which will yield him 77 marks. Thus, irrespective of the answer key, Chef can guarantee 77 marks by marking all answers as option AA.
+
+solution
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner sc = new Scanner(System.in);
+int t =sc.nextInt();
+		
+		while(t-->0){
+		    int x =sc.nextInt();
+			int y =sc.nextInt();
+			int z =sc.nextInt();
+			int a =sc.nextInt();
+			int b =sc.nextInt();
+		  
+		  int c =Math.max(b,Math.max(a ,Math.max(y,z)));
+		   
+		   System.out.println(c);
+		}   
+	}
+}
