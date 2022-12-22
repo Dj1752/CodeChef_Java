@@ -1,0 +1,90 @@
+Problem
+Chef and Chefina are residing in a hotel.
+
+There are 1010 floors in the hotel and each floor consists of 1010 rooms.
+
+Floor 11 consists of room numbers 11 to 1010.
+Floor 22 consists of room numbers 1111 to 2020.
+\ldots…
+Floor ii consists of room numbers 10 \cdot (i-1) + 110⋅(i−1)+1 to 10 \cdot i10⋅i.
+You know that Chef's room number is XX while Chefina's Room number is YY.
+If Chef starts from his room, find the number of floors he needs to travel to reach Chefina's room.
+
+Input Format
+First line will contain TT, number of test cases. Then the test cases follow.
+Each test case contains of a single line of input, two integers X, YX,Y, the room numbers of Chef and Chefina respectively.
+Output Format
+For each test case, output the number of floors Chef needs to travel to reach Chefina's room.
+
+Constraints
+1 \leq T \leq 10001≤T≤1000
+1 \leq X, Y \leq 1001≤X,Y≤100
+X \neq YX=Y
+Sample 1:
+Input
+Output
+4
+1 100
+42 50
+53 30
+81 80
+9
+0
+3
+1
+Explanation:
+Test Case 11: Since Room 11 is on 1^{st}1 
+st
+  floor and Room 100100 is on 10^{th}10 
+th
+  floor, Chef needs to climb 99 floors to reach Chefina's Room.
+
+Test Case 22: Since Room 4242 is on 5^{th}5 
+th
+  floor and Room 5050 is also on 5^{th}5 
+th
+  floor, Chef does not need to climb any floor.
+
+Test Case 33: Since Room 5353 is on 6^{th}6 
+th
+  floor and Room 3030 is on 3^{rd}3 
+rd
+  floor, Chef needs to go down 33 floors to reach Chefina's Room.
+
+Test Case 44: Since Room 8181 is on 9^{th}9 
+th
+  floor and Room 8080 is on 8^{th}8 
+th
+  floor, Chef needs to go down 11 floors to reach Chefina's Room.
+  Solution
+  
+  /* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner sc = new Scanner(System.in);
+int t =sc.nextInt();
+		
+		while(t-->0){
+		    float x =sc.nextInt();
+			float y =sc.nextInt();
+			int z =(int)Math.ceil(x/10);
+			int a=(int)Math.ceil(y/10);
+			
+			if(z>=a)
+		    System.out.println(z-a);
+		    else
+		    System.out.println(a-z);
+		   
+		 
+		}   
+	}
+}
