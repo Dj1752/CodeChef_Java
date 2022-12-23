@@ -1,0 +1,73 @@
+Problem
+The National Championships are starting soon. There are 44 race categories, numbered from 11 to 44, that Chef is interested in. Chef is participating in exactly 22 of these categories.
+
+Chef has an arch-rival who is, unfortunately, the only person participating who is better than Chef, i.e, Chef can't defeat the arch-rival in any of the four race categories but can defeat anyone else. Chef's arch-rival is also participating in exactly 22 of the four categories.
+
+Chef hopes to not fall into the same categories as that of the arch-rival.
+
+Given X, Y, A, BX,Y,A,B where X, YX,Y are the races that Chef participates in, and A, BA,B are the races that Chef's arch-rival participates in, find the maximum number of gold medals (first place) that Chef can win.
+
+Input Format
+The first line of input contains an integer TT, denoting the number of testcases. The description of TT testcases follows.
+Each testcase consists of a single line containing four space-separated integers — the values of X, Y, AX,Y,A, and BB respectively.
+Output Format
+For each testcase, print a single line containing one integer — the maximum number of gold medals that Chef can win.
+Constraints
+1 \leq T \leq 1441≤T≤144
+1 \leq X, Y, A, B \leq 41≤X,Y,A,B≤4
+X \neq YX=Y
+A \neq BA=B
+Subtasks
+Subtask #1 (100 points): Original constraints
+
+Sample 1:
+Input
+Output
+3
+4 3 1 2
+4 2 1 2
+2 1 1 2
+2
+1
+0
+Explanation:
+Test case 11: Chef participates in the races 4, 34,3, whereas Chef's rival participates in 1, 21,2. As Chef's only rival does not participate in any of the races that Chef takes part in, Chef can win the gold medal in both of the races, thus the answer is 22.
+
+Test case 22: Chef participates in the races 4, 24,2, whereas Chef's rival participates in 1, 21,2. Chef cannot win race 22 as Chef will be beaten by the arch-rival, however Chef can win the gold medal for race 44. Thus the answer is 11.
+
+Test case 33: Chef participates in the races 2, 12,1, whereas Chef's rival participates in 1, 21,2. Chef will be beaten by the arch-rival in both races, thus the answer is 00.
+
+Solution
+
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		
+		Scanner sc = new Scanner(System.in);
+int t =sc.nextInt();
+		
+		while(t-->0){
+		    int x =sc.nextInt();
+			int y =sc.nextInt();
+			int z =sc.nextInt();
+			int a =sc.nextInt();
+		
+		   if(x==z&&y==a||x==a&&y==z)
+		   System.out.println("0");
+		   else if((x!=z&&y!=a)&&(x!=a&&y!=z))
+		   System.out.println("2");
+		   else 
+		   System.out.println("1");
+		   
+		}
+	}
+}
