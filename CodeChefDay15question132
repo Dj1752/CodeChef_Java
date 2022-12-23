@@ -1,0 +1,44 @@
+Problem
+Read problem statements in Mandarin Chinese and Bengali.
+Given nn (nn is even), determine the number of black cells in an n \times nn×n chessboard.
+
+Input Format
+The only line of the input contains a single integer nn.
+
+Output Format
+Output the number of black cells in an n \times nn×n chessboard.
+
+Constraints
+2 \leq n \leq 1002≤n≤100
+nn is even
+Sample 1:
+Input
+Output
+8
+32
+Explanation:
+Chess_Board.svg
+There are 3232 black cells and 3232 white cells in an 8 \times 88×8 chessboard. So the answer is 3232.
+
+Soltuion
+
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner sc = new Scanner(System.in);
+        int t =sc.nextInt();
+		if(t%2==0){
+		    int a=(t*t)/2;
+		    System.out.println(a);
+		}
+	}
+}
