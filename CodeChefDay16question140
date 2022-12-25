@@ -1,0 +1,67 @@
+Problem
+An electronics shop sells red and blue lamps. A red lamp costs XX rupees and a blue lamp costs YY rupees.
+
+Chef is going to buy exactly NN lamps from this shop. Find the minimum amount of money Chef needs to pay such that at least KK of the lamps bought are red.
+
+Input Format
+The first line of input will contain a single integer TT, denoting the number of test cases.
+Each test case consists of a single line containing four space-separated integers N, K, X, YN,K,X,Y.
+Output Format
+For each test case, output on a new line the minimum amount of money Chef needs to pay in order to buy NN lamps such that at least KK of the lamps bought are red.
+
+Constraints
+1 \leq T \leq 10^31≤T≤10 
+3
+ 
+1 \leq N \le 10^81≤N≤10 
+8
+ 
+0 \leq K \leq N0≤K≤N
+1 \leq X, Y \le 101≤X,Y≤10
+Sample 1:
+Input
+Output
+4
+2 2 5 1
+4 1 3 1
+3 0 4 7
+5 2 3 4
+10
+6
+12
+15
+Explanation:
+Test case 11: Chef buys 22 red lamps with 2 \cdot 5 = 102⋅5=10 rupees.
+
+Test case 22: Chef buys 11 red lamp and 33 blue lamps with 1 \cdot 3 + 3\cdot 1 = 61⋅3+3⋅1=6 rupees.
+
+Test case 33: Chef buys 33 red lamps with 3 \cdot 4 = 123⋅4=12 rupees.
+
+Soltuion
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner sc = new Scanner(System.in);
+int t =sc.nextInt();
+		
+		while(t-->0){
+		     int n =sc.nextInt();
+			int k =sc.nextInt();
+		    int x =sc.nextInt();
+			int y =sc.nextInt();
+			if(x>y)
+		    System.out.println(k*x+(n-k)*y);
+		    else
+		    System.out.println(n*x);
+	}
+}
+}
