@@ -1,0 +1,68 @@
+Problem
+Read problem statements in Bengali, Mandarin Chinese, Russian, and Vietnamese as well.
+Chefland has 77 days in a week. Chef is very conscious about his work done during the week.
+
+There are two ways he can spend his energy during the week. The first way is to do xx units of work every day and the second way is to do yy (\gt x>x) units of work for the first dd (\lt 7<7) days and to do zz (\lt x<x) units of work thereafter since he will get tired of working more in the initial few days.
+
+Find the maximum amount of work he can do during the week if he is free to choose either of the two strategies.
+
+Input
+The first line contains an integer TT, the number of test cases. Then the test cases follow.
+Each test case contains a single line of input, four integers dd, xx, yy, zz.
+Output
+For each testcase, output in a single line the answer to the problem.
+
+Constraints
+1 \leq T \leq 5\cdot 10^31≤T≤5⋅10 
+3
+ 
+1 \leq d \lt 71≤d<7
+1 \leq z \lt x \lt y \leq 181≤z<x<y≤18
+Subtasks
+Subtask #1 (100 points): Original constraints
+
+Sample 1:
+Input
+Output
+3
+1 2 3 1
+6 2 3 1
+1 2 8 1
+14
+19
+14
+Explanation:
+Test Case 11: Using the first strategy, Chef does 2 \cdot 7 = 142⋅7=14 units of work and using the second strategy Chef does 3 \cdot 1 + 1 \cdot 6 = 93⋅1+1⋅6=9 units of work. So the maximum amount of work that Chef can do is \max(14, 9) = 14max(14,9)=14 units by using the first strategy.
+
+Test Case 22: Using the first strategy, Chef does 2 \cdot 7 = 142⋅7=14 units of work and using the second strategy Chef does 3 \cdot 6 + 1 \cdot 1 = 193⋅6+1⋅1=19 units of work. So the maximum amount of work that Chef can do is \max(14, 19) = 19max(14,19)=19 units by using the second strategy.
+
+Solution
+
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner sc = new Scanner(System.in);
+int t =sc.nextInt();
+		
+		while(t-->0){
+		    int x =sc.nextInt();
+			int y =sc.nextInt();
+			int z =sc.nextInt();
+	       	int a =sc.nextInt();
+		int res = y*7;
+		int res1 = (z*x+(7-x)*a);
+		
+		System.out.println(Math.max(res,res1));
+	  
+	}
+	}
+}
