@@ -1,0 +1,93 @@
+Problem
+A bulb company claims that the average lifetime of its bulbs is at least XX units.
+
+The company ran a test on NN bulbs. You are given the lifetime of N-1N−1 of these bulbs. What is the minimum non-negative integer value of lifetime the remaining bulb can have, such that the claim of the company holds true?
+
+Input Format
+The first line contains a single integer TT - the number of test cases. Then the test cases follow.
+The first line of each test case contains two integers NN and XX - denoting the number of test bulbs and the minimum average lifetime of bulbs in the company's claim.
+The second line of each test case contains N - 1N−1 space-separated integers A_1, A_2, \dots, A_{N-1}A 
+1
+​
+ ,A 
+2
+​
+ ,…,A 
+N−1
+​
+  denoting the lifetimes of N-1N−1 of the test bulbs.
+Output Format
+For each testcase, output the minimum non-negative integer value of lifetime the remaining bulb can have such that the claim of the company holds true.
+
+Constraints
+1 \leq T \leq 1001≤T≤100
+2 \leq N \leq 1002≤N≤100
+0 \leq A_i \leq 10000≤A 
+i
+​
+ ≤1000
+1 \leq X \leq 10001≤X≤1000
+Sample 1:
+Input
+Output
+3
+3 4
+1 5
+4 2
+5 8 6
+3 1000
+0 0
+6
+0
+3000
+Explanation:
+Let YY denote the value of the lifetime of the remaining bulb.
+
+Test case 1: The remaining bulb must have lifetime no less than 66 units. The average lifetime with Y = 6Y=6 is \frac{(1+5+6)}{3} = 4 \geq X 
+3
+(1+5+6)
+​
+ =4≥X. It can be proven that for any non-negative integer value of Y \lt 6Y<6 it is not possible to have an average lifeftime of at least X = 4X=4.
+
+Test case 2: The average lifetime with Y = 0Y=0 is \frac{(5+8+6+0)}{4} = 4.75 \geq X 
+4
+(5+8+6+0)
+​
+ =4.75≥X. Thus the minimum non negative value which satisfies the condition is Y = 0Y=0.
+ 
+ Solution
+ 
+ /* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		
+		Scanner sc = new Scanner(System.in);
+		int t =sc.nextInt();
+		
+		while(t-->0){
+		    int n =sc.nextInt();
+			int x =sc.nextInt();
+			int [] arr = new int[n-1];
+			int sum=0;
+			for (int i=0;i<n-1 ;i++ ){
+			    arr[i]=sc.nextInt();
+			    sum=sum+arr[i];
+			}
+			int bulb=(n*x)-sum;
+			if(bulb>0){
+			    System.out.println(bulb);
+			}else
+			System.out.println("0");
+	
+		}
+	}
+}
