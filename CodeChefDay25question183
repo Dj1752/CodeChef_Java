@@ -1,0 +1,87 @@
+Problem
+Write a program to obtain length (L)(L) and breadth (B)(B) of a rectangle and check whether its area is greater or perimeter is greater or both are equal.
+
+Input Format
+First line will contain the length (L)(L) of the rectangle.
+Second line will contain the breadth (B)(B) of the rectangle.
+Output Format
+Output 2 lines.
+
+In the first line print "Area" if area is greater otherwise print "Peri" and if they are equal print "Eq".(Without quotes).
+
+In the second line print the calculated area or perimeter (whichever is greater or anyone if it is equal).
+
+Constraints
+1 \leq L \leq 10001≤L≤1000
+1 \leq B \leq 10001≤B≤1000/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner sc = new Scanner(System.in);
+
+		    int x =sc.nextInt();
+			int y =sc.nextInt();
+			
+			int Area = x*y;
+			int pri = 2*(x+y);
+		    if(Area >pri)
+		    System.out.println("Area"+"\n"+Area);
+		    else if(pri>Area)
+		    System.out.println("Peri"+"\n"+pri);
+		    else
+		    System.out.println("Eq" +"\n"+pri);
+		    
+	}
+}
+
+Sample 1:
+Input
+Output
+1
+2
+Peri
+6
+Explanation:
+Area = 1 * 2 = 2
+Peri = 2 * (1 + 2) = 6
+Since Perimeter is greater than Area, hence the output is :
+Peri
+6
+
+Solution
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner sc = new Scanner(System.in);
+
+		    int x =sc.nextInt();
+			int y =sc.nextInt();
+			
+			int Area = x*y;
+			int pri = 2*(x+y);
+		    if(Area >pri)
+		    System.out.println("Area"+"\n"+Area);
+		    else if(pri>Area)
+		    System.out.println("Peri"+"\n"+pri);
+		    else
+		    System.out.println("Eq" +"\n"+pri);
+		    
+	}
+}
