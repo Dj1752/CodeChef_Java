@@ -1,0 +1,68 @@
+Problem
+Chef has 22 numbers AA and BB (A \lt B)(A<B).
+
+Chef will perform some operations on AA.
+
+In the i^{th}i 
+th
+  operation:
+
+Chef will add 11 to AA if ii is odd.
+Chef will add 22 to AA if ii is even.
+Chef can stop at any instant. Can Chef make AA equal to BB?
+
+Input Format
+The first line contains a single integer TT — the number of test cases. Then the test cases follow.
+The first and only line of each test case contains two space separated integers AA and BB.
+Output Format
+For each test case, output YES if Chef can make AA and BB equal, NO otherwise.
+
+Note that the checker is case-insensitive. So, YES, Yes, yEs are all considered same.
+
+Constraints
+1 \leq T \leq 10001≤T≤1000
+1 \leq A \lt B \leq 10^91≤A<B≤10 
+9
+ 
+Sample 1:
+Input
+Output
+4
+1 2
+3 6
+4 9
+10 20
+YES
+YES
+NO
+YES
+
+Solution
+
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner sc = new Scanner(System.in);
+         int t =sc.nextInt();
+		
+		while(t-->0){
+		    int x =sc.nextInt();
+			int y =sc.nextInt();
+		     if((y-x)%3==2)
+		     System.out.println("No");
+		     else
+		     System.out.println("Yes");
+		   
+		 
+		}   
+	}
+}
