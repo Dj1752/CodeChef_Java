@@ -1,0 +1,71 @@
+Problem
+Utkarsh is currently sitting for placements. He has applied to three companies named A, BA,B, and CC.
+
+You know Utkarsh's order of preference among these 33 companies, given to you as characters first, second, and third respectively (where first is the company he prefers most).
+
+You also know that Utkarsh has received offers from exactly two of these three companies, given you as characters xx and yy.
+
+Utkarsh will always accept the offer from whichever company is highest on his preference list. Which company will he join?
+
+Input Format
+The first line of input contains a single integer TT, denoting the number of test cases. The description of TT test cases follows.
+The first line of each test case contains three different space-separated characters: first, second, and third, denoting Utkarsh's order of preference among the three companies.
+The second line of each test case contains two space-separated characters xx and yy, the companies from which Utkarsh has received offers.
+Output Format
+For each test case, print one line containing a single character, the company whose offer Utkarsh will accept.
+
+The output is not case sensitive, so if the answer is AA, both aa and AA will be accepted.
+
+Constraints
+1 \leq T \leq 361≤T≤36
+first, second and third are three different characters among \{A, B, C\}{A,B,C}.
+xx and yy are two different characters among \{A, B, C\}{A,B,C}.
+Subtasks
+Subtask #1 (100 points): Original constraints
+
+Sample 1:
+Input
+Output
+2
+A B C
+A B
+B C A
+A C
+A
+C
+Explanation:
+Test Case 1. Utkarsh has received offers from AA and BB. Of these two, he prefers company AA (first preference) over BB (second preference). Therefore Utkarsh will accept the offer of company AA.
+
+Test Case 2. Utkarsh has received offers from AA and CC, where company CC is his second preference and company AA is his third preference. Utkarsh will accept the offer of company CC.
+Solution
+
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner sc = new Scanner(System.in);
+        int t =sc.nextInt();
+		
+		while(t-->0){
+		   char a=sc.next().charAt(0);
+		   char b=sc.next().charAt(0);
+		   char c=sc.next().charAt(0);
+		   char x=sc.next().charAt(0);
+		   char y=sc.next().charAt(0);
+		   
+		   if(x==a||y==a){
+		       System.out.println(a);
+		   }else if(x==b||y==b)
+		   {
+		       System.out.println(b);
+		   }
+	}}
+}
