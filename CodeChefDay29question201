@@ -1,0 +1,63 @@
+Problem
+Chef has decided to go to a gold mine along with NN of his friends (thus, total N+1N+1 people including Chef go to the gold mine).
+
+The gold mine contains a total of XX kg of gold. Every person has the capacity of carrying up \textbf{atmost}atmost YY kg of gold.
+
+Will Chef and his friends together be able to carry up all the gold from the gold mine assuming that they can go to the mine exactly once.
+
+Input Format
+First line will contain TT, number of testcases. Then the testcases follow.
+Each testcase contains of a single line of input, three integers N, X, YN,X,Y.
+Output Format
+For each testcase, output "YES" if you and your friends can carry all the gold, otherwise output "NO".
+
+You may print each character of the string in uppercase or lowercase (for example, the strings "yEs", "yes", "Yes" and "YES" will all be treated as identical).
+
+Constraints
+1 \leq T \leq 10001≤T≤1000
+1 \leq N,X,Y \leq 10001≤N,X,Y≤1000
+Sample 1:
+Input
+Output
+3
+2 10 3
+2 10 4
+1 5 10
+NO
+YES
+YES
+Explanation:
+Test Case 11: You along with your friends can only carry a maximum of 9 (3 \times 3)9(3×3) kg of gold.
+
+Test Case 22: It is possible to carry all the gold from the mine. You can carry 44 kg of gold and your both friends carry 33 kg of gold each, thus carrying the whole 1010 kg of gold.
+
+Solution
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner sc = new Scanner(System.in);
+int t =sc.nextInt();
+		
+		while(t-->0){
+		    int n =sc.nextInt();
+		    int x =sc.nextInt();
+		    int y =sc.nextInt();
+		    int res = (n+1)*y;
+		    
+		    if(res>=x)
+		    System.out.println("yes");
+		    else
+		    System.out.println("no");
+		    
+	}
+	}
+}
