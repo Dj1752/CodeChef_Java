@@ -1,0 +1,55 @@
+Problem
+Chef recently realized that he needs a haircut, and went to his favorite hair salon. At the salon, he found NN customers waiting for their haircuts. From his past experience, Chef knows that the salon takes MM minutes per customer. Only one person can get their haircut at a time.
+
+For how many minutes will Chef have to wait before he can get his haircut?
+
+Input Format
+The first line of input contains a single integer TT, denoting the number of test cases. The description of TT test cases follows.
+The first and only line of each test case contains two space-separated integers NN and MM, as described in the problem.
+Output Format
+For each test case, print a single line containing one integer — the number of minutes that Chef will have to wait before he can get his haircut.
+
+Constraints
+1 \leq T \leq 10001≤T≤1000
+0 \leq N \leq 10000≤N≤1000
+1 \leq M \leq 10001≤M≤1000
+Subtasks
+Subtask #1 (100 points): Original constraints
+
+Sample 1:
+Input
+Output
+2
+2 15
+0 15
+30
+0
+Explanation:
+Test case 11: There are 22 customers waiting for the haircut and the salon will take 1515 minutes for each customer, hence Chef will have to wait for 3030 minutes before he can get his haircut.
+
+Test case 22: There are 00 customers waiting for the haircut, therefore the Chef will not have wait to get the haircut.
+Solution
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner sc = new Scanner(System.in);
+         int t =sc.nextInt();
+		
+		while(t-->0){
+		   int x =sc.nextInt();
+			int y =  sc.nextInt();
+			
+			System.out.println(x*y);
+		 
+		}   
+	}
+}
