@@ -1,0 +1,89 @@
+Problem
+The mayor of your city has decided to throw a party to gather the favour of his people in different regions of the city.
+
+There are 33 distinct regions in the city namely AA, BB, CC comprising of P_AP 
+A
+​
+ , P_BP 
+B
+​
+  and P_CP 
+C
+​
+  number of people respectively.
+
+However, the mayor knows that people of the region BB are in conflict with people of regions AA and CC. So, there will be a conflict if people from region BB are present at the party along with people from region AA or CC.
+
+The mayor wants to invite as many people as possible and also avoid any conflicts. Help him invite maximum number of people to the party.
+
+Input Format
+The first line contains a single integer TT - the number of test cases. Then the test cases follow.
+The first line of each test case contains three integers P_AP 
+A
+​
+ , P_BP 
+B
+​
+  and P_CP 
+C
+​
+  - number of people living in regions AA, BB and CC respectively.
+Output Format
+For each test case, output the maximum number of people that can be invited to the party.
+
+Constraints
+1 \leq T \leq 10001≤T≤1000
+1 \leq P_A, P_B, P_C \leq 10001≤P 
+A
+​
+ ,P 
+B
+​
+ ,P 
+C
+​
+ ≤1000
+Sample 1:
+Input
+Output
+3
+2 3 4
+1 5 2
+8 8 8
+6
+5
+16
+Explanation:
+Test case-1: Mayor can invite all the people from region AA and CC. So the maximum number of people invited is 66.
+
+Test case-2: Mayor can invite all the people from region BB. So the maximum number of people invited is 55.
+
+Solution
+/* package codechef; // don't place package name! */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner sc = new Scanner(System.in);
+         int t =sc.nextInt();
+		
+		while(t-->0){
+		   int x =sc.nextInt();
+			int y =  sc.nextInt();
+			int z =  sc.nextInt();
+			int res =x+z;
+			if(res>=y)
+			System.out.println(res);
+		else
+			System.out.println(y);
+		 
+		}   
+	}
+}
